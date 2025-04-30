@@ -10,7 +10,7 @@ namespace SistemaVentas.Models.Entities
     public class Carrito
     {
         [Key]
-        public int idcarrito { get; set; }
+        public int id_carrito { get; set; }
         public int clientes_id_cliente { get; set; }
         public int producto_id_producto { get; set; }
         public int cantidad { get; set; }

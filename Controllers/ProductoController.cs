@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using SistemaVentas.Data;
 using SistemaVentas.Models.Entities;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering; 
 
 namespace SistemaVentas.Controllers
 {
@@ -28,6 +30,8 @@ namespace SistemaVentas.Controllers
         // GET: Producto/Create
         public IActionResult Create()
         {
+            // Cargar las categorías disponibles para el desplegable
+            ViewBag.Categorias = new SelectList(_context.categoria, "id_categoria", "nombre");
             return View();
         }
 
@@ -38,10 +42,20 @@ namespace SistemaVentas.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(producto);
-                _context.SaveChanges();
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    _context.Add(producto);
+                    _context.SaveChanges();
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (Exception ex)
+                {
+                    // Mostrar el error al usuario
+                    ModelState.AddModelError(string.Empty, "Error al guardar el producto: " + ex.Message);
+                }
             }
+            // Volver a cargar las categorías en caso de error
+            ViewBag.Categorias = new SelectList(_context.categoria, "id_categoria", "nombre");
             return View(producto);
         }
 
@@ -58,6 +72,7 @@ namespace SistemaVentas.Controllers
             {
                 return NotFound();
             }
+            ViewBag.Categorias = new SelectList(_context.categoria, "id_categoria", "nombre");
             return View(producto);
         }
 
@@ -73,10 +88,18 @@ namespace SistemaVentas.Controllers
 
             if (ModelState.IsValid)
             {
-                _context.Update(producto);
-                _context.SaveChanges();
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    _context.Update(producto);
+                    _context.SaveChanges();
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError(string.Empty, "Error al actualizar el producto: " + ex.Message);
+                }
             }
+            ViewBag.Categorias = new SelectList(_context.categoria, "id_categoria", "nombre");
             return View(producto);
         }
 
@@ -102,8 +125,11 @@ namespace SistemaVentas.Controllers
         public IActionResult DeleteConfirmed(int id)
         {
             var producto = _context.producto.Find(id);
-            _context.producto.Remove(producto);
-            _context.SaveChanges();
+            if (producto != null)
+            {
+                _context.producto.Remove(producto);
+                _context.SaveChanges();
+            }
             return RedirectToAction(nameof(Index));
         }
     }

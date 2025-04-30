@@ -2,6 +2,13 @@
 
 <h1>Crear Producto</h1>
 
+@if (!string.IsNullOrEmpty(ViewData.ModelState[string.Empty]?.Errors.FirstOrDefault()?.ErrorMessage))
+{
+    <div class="alert alert-danger">
+        @ViewData.ModelState[string.Empty]?.Errors.FirstOrDefault()?.ErrorMessage
+    </div>
+}
+
 <form asp-action="Create" method="post">
     <div class="form-group">
         <label asp-for="nombre" class="control-label"></label>
@@ -30,7 +37,9 @@
     </div>
     <div class="form-group">
         <label asp-for="categoria_id_categoria" class="control-label"></label>
-        <input asp-for="categoria_id_categoria" class="form-control" />
+        <select asp-for="categoria_id_categoria" class="form-control" asp-items="ViewBag.Categorias">
+            <option value="">Seleccione una categoría</option>
+        </select>
         <span asp-validation-for="categoria_id_categoria" class="text-danger"></span>
     </div>
     <div class="form-group">
