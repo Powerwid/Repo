@@ -1,0 +1,26 @@
+@model SistemaVentas.Models.Entities.Producto
+
+<h1>Eliminar Producto</h1>
+
+<h3>¿Estás seguro de que quieres eliminar este producto?</h3>
+<div>
+    <h4>Producto</h4>
+    <dl class="row">
+        <dt class="col-sm-2">Nombre</dt>
+        <dd class="col-sm-10">@Model.Nombre</dd>
+        <dt class="col-sm-2">Descripción</dt>
+        <dd class="col-sm-10">@Model.Descripcion</dd>
+        <dt class="col-sm-2">Precio</dt>
+        <dd class="col-sm-10">@Model.Precio</dd>
+        <dt class="col-sm-2">Stock</dt>
+        <dd class="col-sm-10">@Model.Stock</dd>
+        <dt class="col-sm-2">Estado</dt>
+        <dd class="col-sm-10">@Model.Estado</dd>
+    </dl>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="IdProducto" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
