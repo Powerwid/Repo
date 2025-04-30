@@ -20,14 +20,14 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>@item.Nombre</td>
-                <td>@item.Descripcion</td>
-                <td>@item.Precio</td>
-                <td>@item.Stock</td>
-                <td>@item.Estado</td>
+                <td>@item.nombre</td>
+                <td>@item.descripcion</td>
+                <td>@item.precio</td>
+                <td>@item.stock</td>
+                <td>@item.estado</td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.IdProducto">Editar</a> |
-                    <a asp-action="Delete" asp-route-id="@item.IdProducto">Eliminar</a>
+                    <a asp-action="Edit" asp-route-id="@item.id_producto">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.id_producto">Eliminar</a>
                 </td>
             </tr>
         }

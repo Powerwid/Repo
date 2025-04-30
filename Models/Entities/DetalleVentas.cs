@@ -10,17 +10,17 @@ namespace SistemaVentas.Models.Entities
     public class DetalleVentas
     {
         [Key]
-        public int IdDetalleVenta { get; set; }
-        public int VentasIdVenta { get; set; }
-        public int ProductoIdProducto { get; set; }
-        public int Cantidad { get; set; }
-        public decimal PrecioUnitario { get; set; }
-        public decimal Subtotal { get; set; }
+        public int id_detalle_venta { get; set; }
+        public int ventas_id_venta { get; set; }
+        public int producto_id_producto { get; set; }
+        public int cantidad { get; set; }
+        public decimal precio_unitario { get; set; }
+        public decimal subtotal { get; set; }
 
-        [ForeignKey("VentasIdVenta")]
-        public Ventas Venta { get; set; }
+        [ForeignKey("ventas_id_venta")]
+        public Ventas venta { get; set; }
 
-        [ForeignKey("ProductoIdProducto")]
-        public Producto Producto { get; set; }
+        [ForeignKey("producto_id_producto")]
+        public Producto producto { get; set; }
     }
 }

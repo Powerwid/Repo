@@ -10,15 +10,15 @@ namespace SistemaVentas.Models.Entities
     public class Producto
     {
         [Key]
-        public int IdProducto { get; set; }
-        public string Nombre { get; set; }
-        public string Descripcion { get; set; }
-        public decimal Precio { get; set; }
-        public int Stock { get; set; }
-        public string Estado { get; set; }
-        public int CategoriaIdCategoria { get; set; }
+        public int id_producto { get; set; }
+        public string nombre { get; set; }
+        public string descripcion { get; set; }
+        public decimal precio { get; set; }
+        public int stock { get; set; }
+        public string estado { get; set; }
+        public int categoria_id_categoria { get; set; }
 
-        [ForeignKey("CategoriaIdCategoria")]
-        public Categoria Categoria { get; set; }
+        [ForeignKey("categoria_id_categoria")]
+        public Categoria categoria { get; set; }
     }
 }

@@ -9,19 +9,19 @@ namespace SistemaVentas.Data
 {
     public class AppDbContext : DbContext
     {
-        public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<Clientes> Clientes { get; set; }
-        public DbSet<Ventas> Ventas { get; set; }
-        public DbSet<Comprobantes> Comprobantes { get; set; }
-        public DbSet<Compras> Compras { get; set; }
-        public DbSet<ComprobantesVentas> ComprobantesVentas { get; set; }
-        public DbSet<Pagos> Pagos { get; set; }
-        public DbSet<Categoria> Categorias { get; set; }
-        public DbSet<Producto> Productos { get; set; }
-        public DbSet<DetalleVentas> DetalleVentas { get; set; }
-        public DbSet<DetalleCompra> DetalleCompras { get; set; }
-        public DbSet<MovimientoInventario> MovimientosInventario { get; set; }
-        public DbSet<Carrito> Carritos { get; set; } 
+        public DbSet<Usuario> usuario { get; set; }
+        public DbSet<Clientes> clientes { get; set; }
+        public DbSet<Ventas> ventas { get; set; }
+        public DbSet<Comprobantes> comprobantes { get; set; }
+        public DbSet<Compras> compras { get; set; }
+        public DbSet<ComprobantesVentas> comprobantes_ventas { get; set; }
+        public DbSet<Pagos> pagos { get; set; }
+        public DbSet<Categoria> categoria { get; set; }
+        public DbSet<Producto> producto { get; set; }
+        public DbSet<DetalleVentas> detalle_ventas { get; set; }
+        public DbSet<DetalleCompra> detalle_compra { get; set; }
+        public DbSet<MovimientoInventario> movimiento_inventario { get; set; }
+        public DbSet<Carrito> carrito { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
@@ -30,21 +30,7 @@ namespace SistemaVentas.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            // Configurar nombres de tablas
-            modelBuilder.Entity<Usuario>().ToTable("usuario");
-            modelBuilder.Entity<Clientes>().ToTable("clientes");
-            modelBuilder.Entity<Ventas>().ToTable("ventas");
-            modelBuilder.Entity<Comprobantes>().ToTable("comprobantes");
-            modelBuilder.Entity<Compras>().ToTable("compras");
-            modelBuilder.Entity<ComprobantesVentas>().ToTable("comprobantes_ventas");
-            modelBuilder.Entity<Pagos>().ToTable("pagos");
-            modelBuilder.Entity<Categoria>().ToTable("categoria");
-            modelBuilder.Entity<Producto>().ToTable("producto");
-            modelBuilder.Entity<DetalleVentas>().ToTable("detalle_ventas");
-            modelBuilder.Entity<DetalleCompra>().ToTable("detalle_compra");
-            modelBuilder.Entity<MovimientoInventario>().ToTable("movimiento_inventario");
-            modelBuilder.Entity<Carrito>().ToTable("carrito"); 
+            // No es necesario mapear los nombres de las tablas, ya que coinciden con los nombres de las clases
         }
     }
 }

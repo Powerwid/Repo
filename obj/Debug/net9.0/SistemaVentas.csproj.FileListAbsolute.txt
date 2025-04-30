@@ -195,3 +195,4 @@ C:\Users\mandarina\Documents\Proyecto\Entregable\Entregable_2\SistemaVentas\Sist
 C:\Users\mandarina\Documents\Proyecto\Entregable\Entregable_2\SistemaVentas\SistemaVentas\obj\Debug\net9.0\SistemaVentas.pdb
 C:\Users\mandarina\Documents\Proyecto\Entregable\Entregable_2\SistemaVentas\SistemaVentas\obj\Debug\net9.0\SistemaVentas.genruntimeconfig.cache
 C:\Users\mandarina\Documents\Proyecto\Entregable\Entregable_2\SistemaVentas\SistemaVentas\obj\Debug\net9.0\ref\SistemaVentas.dll
+C:\Users\mandarina\Documents\Proyecto\Entregable\Entregable_2\SistemaVentas\SistemaVentas\obj\Debug\net9.0\SistemaVentas.sourcelink.json

@@ -10,14 +10,14 @@ namespace SistemaVentas.Models.Entities
     public class Ventas
     {
         [Key]
-        public int IdVenta { get; set; }
-        public int UsuarioIdUsuario { get; set; }
-        public int ClientesIdCliente { get; set; }
+        public int id_venta { get; set; }
+        public int usuario_id_usuario { get; set; }
+        public int clientes_id_cliente { get; set; }
 
-        [ForeignKey("UsuarioIdUsuario")]
-        public Usuario Usuario { get; set; }
+        [ForeignKey("usuario_id_usuario")]
+        public Usuario usuario { get; set; }
 
-        [ForeignKey("ClientesIdCliente")]
-        public Clientes Cliente { get; set; }
+        [ForeignKey("clientes_id_cliente")]
+        public Clientes cliente { get; set; }
     }
 }

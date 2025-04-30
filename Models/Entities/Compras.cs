@@ -10,13 +10,13 @@ namespace SistemaVentas.Models.Entities
     public class Compras
     {
         [Key]
-        public int IdCompra { get; set; }
-        public int UsuarioIdUsuario { get; set; }
-        public DateTime? FechaCompra { get; set; }
-        public decimal MontoTotal { get; set; }
-        public string Estado { get; set; }
+        public int id_compra { get; set; }
+        public int usuario_id_usuario { get; set; }
+        public DateTime? fecha_compra { get; set; }
+        public decimal monto_total { get; set; }
+        public string estado { get; set; }
 
-        [ForeignKey("UsuarioIdUsuario")]
-        public Usuario Usuario { get; set; }
+        [ForeignKey("usuario_id_usuario")]
+        public Usuario usuario { get; set; }
     }
 }

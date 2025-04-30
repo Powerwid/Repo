@@ -10,17 +10,17 @@ namespace SistemaVentas.Models.Entities
     public class Carrito
     {
         [Key]
-        public int IdCarrito { get; set; }
-        public int ClientesIdCliente { get; set; }
-        public int ProductoIdProducto { get; set; }
-        public int Cantidad { get; set; }
-        public DateTime? FechaAgregado { get; set; }
-        public string Estado { get; set; }
+        public int idcarrito { get; set; }
+        public int clientes_id_cliente { get; set; }
+        public int producto_id_producto { get; set; }
+        public int cantidad { get; set; }
+        public DateTime? fecha_agregado { get; set; }
+        public string estado { get; set; }
 
-        [ForeignKey("ClientesIdCliente")]
-        public Clientes Cliente { get; set; }
+        [ForeignKey("clientes_id_cliente")]
+        public Clientes cliente { get; set; }
 
-        [ForeignKey("ProductoIdProducto")]
-        public Producto Producto { get; set; }
+        [ForeignKey("producto_id_producto")]
+        public Producto producto { get; set; }
     }
 }

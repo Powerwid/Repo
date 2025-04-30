@@ -10,14 +10,14 @@ namespace SistemaVentas.Models.Entities
     public class MovimientoInventario
     {
         [Key]
-        public int IdMovimiento { get; set; }
-        public int ProductoIdProducto { get; set; }
-        public string TipoMovimiento { get; set; }
-        public int Cantidad { get; set; }
-        public DateTime? FechaMovimiento { get; set; }
-        public string Motivo { get; set; }
+        public int id_movimiento { get; set; }
+        public int producto_id_producto { get; set; }
+        public string tipo_movimiento { get; set; }
+        public int cantidad { get; set; }
+        public DateTime? fecha_movimiento { get; set; }
+        public string motivo { get; set; }
 
-        [ForeignKey("ProductoIdProducto")]
-        public Producto Producto { get; set; }
+        [ForeignKey("producto_id_producto")]
+        public Producto producto { get; set; }
     }
 }

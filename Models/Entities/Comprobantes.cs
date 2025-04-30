@@ -9,9 +9,9 @@ namespace SistemaVentas.Models.Entities
     public class Comprobantes
     {
         [Key]
-        public int IdComprobante { get; set; }
-        public string TipoComprobante { get; set; }
-        public int NroComprobante { get; set; }
-        public DateTime? FechaEmision { get; set; }
+        public int id_comprobante { get; set; }
+        public string tipo_comprobante { get; set; }
+        public int nro_comprobante { get; set; }
+        public DateTime? fecha_emision { get; set; }
     }
 }

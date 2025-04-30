@@ -10,18 +10,18 @@ namespace SistemaVentas.Models.Entities
     public class DetalleCompra
     {
         [Key]
-        public int IdDetalleCompra { get; set; }
-        public int ComprasIdCompra { get; set; }
-        public int ProductoIdProducto { get; set; }
-        public int Cantidad { get; set; }
-        public decimal PrecioUnitario { get; set; }
-        public string Metodo { get; set; }
-        public DateTime? FechaDevolucion { get; set; }
+        public int id_detalle_compra { get; set; }
+        public int compras_id_compra { get; set; }
+        public int producto_id_producto { get; set; }
+        public int cantidad { get; set; }
+        public decimal precio_unitario { get; set; }
+        public string metodo { get; set; }
+        public DateTime? fecha_devolucion { get; set; }
 
-        [ForeignKey("ComprasIdCompra")]
-        public Compras Compra { get; set; }
+        [ForeignKey("compras_id_compra")]
+        public Compras compra { get; set; }
 
-        [ForeignKey("ProductoIdProducto")]
-        public Producto Producto { get; set; }
+        [ForeignKey("producto_id_producto")]
+        public Producto producto { get; set; }
     }
 }

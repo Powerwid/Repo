@@ -10,14 +10,14 @@ namespace SistemaVentas.Models.Entities
     public class ComprobantesVentas
     {
         [Key]
-        public int IdComprobanteVenta { get; set; }
-        public int VentasIdVenta { get; set; }
-        public int ComprobantesIdComprobante { get; set; }
+        public int id_comprobante_venta { get; set; }
+        public int ventas_id_venta { get; set; }
+        public int comprobantes_id_comprobante { get; set; }
 
-        [ForeignKey("VentasIdVenta")]
-        public Ventas Venta { get; set; }
+        [ForeignKey("ventas_id_venta")]
+        public Ventas venta { get; set; }
 
-        [ForeignKey("ComprobantesIdComprobante")]
-        public Comprobantes Comprobante { get; set; }
+        [ForeignKey("comprobantes_id_comprobante")]
+        public Comprobantes comprobante { get; set; }
     }
 }

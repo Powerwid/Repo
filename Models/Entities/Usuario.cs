@@ -9,13 +9,13 @@ namespace SistemaVentas.Models.Entities
     public class Usuario
     {
         [Key]
-        public int IdUsuario { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public string Correo { get; set; }
-        public string UsuarioNombre { get; set; } // Renombrado para evitar conflicto con el nombre de la clase
-        public string Contraseña { get; set; }
-        public string Rol { get; set; }
-        public string Estado { get; set; }
+        public int id_usuario { get; set; }
+        public string nombre { get; set; }
+        public string apellido { get; set; }
+        public string correo { get; set; }
+        public string usuario { get; set; }
+        public string contraseña { get; set; }
+        public string rol { get; set; }
+        public string estado { get; set; }
     }
 }

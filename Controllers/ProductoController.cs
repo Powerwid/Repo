@@ -21,7 +21,7 @@ namespace SistemaVentas.Controllers
         // GET: Producto
         public IActionResult Index()
         {
-            var productos = _context.Productos.ToList();
+            var productos = _context.producto.ToList();
             return View(productos);
         }
 
@@ -53,7 +53,7 @@ namespace SistemaVentas.Controllers
                 return NotFound();
             }
 
-            var producto = _context.Productos.Find(id);
+            var producto = _context.producto.Find(id);
             if (producto == null)
             {
                 return NotFound();
@@ -66,7 +66,7 @@ namespace SistemaVentas.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, Producto producto)
         {
-            if (id != producto.IdProducto)
+            if (id != producto.id_producto)
             {
                 return NotFound();
             }
@@ -88,7 +88,7 @@ namespace SistemaVentas.Controllers
                 return NotFound();
             }
 
-            var producto = _context.Productos.Find(id);
+            var producto = _context.producto.Find(id);
             if (producto == null)
             {
                 return NotFound();
@@ -101,8 +101,8 @@ namespace SistemaVentas.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            var producto = _context.Productos.Find(id);
-            _context.Productos.Remove(producto);
+            var producto = _context.producto.Find(id);
+            _context.producto.Remove(producto);
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }

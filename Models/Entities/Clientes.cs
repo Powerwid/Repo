@@ -9,14 +9,14 @@ namespace SistemaVentas.Models.Entities
     public class Clientes
     {
         [Key]
-        public int IdCliente { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public DateTime? FechaVenta { get; set; }
-        public decimal MontoTotal { get; set; }
-        public string Correo { get; set; }
-        public string Telefono { get; set; }
-        public string Direccion { get; set; }
-        public string Estado { get; set; }
+        public int id_cliente { get; set; }
+        public string nombre { get; set; }
+        public string apellido { get; set; }
+        public DateTime? fecha_venta { get; set; }
+        public decimal monto_total { get; set; }
+        public string correo { get; set; }
+        public string telefono { get; set; }
+        public string direccion { get; set; }
+        public string estado { get; set; }
     }
 }
