@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - SistemaVentas</title>
+    <title>@ViewData["Title"] - Tienda</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
@@ -22,12 +22,13 @@
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Producto" asp-action="Index">Productos</a>
                     </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link" asp-controller="Categoria" asp-action="Index">Categorías</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Carrito" asp-action="Index">Carrito</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Categoria" asp-action="Index">Categorías</a>
-                    </li>
+                    
                 </ul>
             </div>
         </nav>

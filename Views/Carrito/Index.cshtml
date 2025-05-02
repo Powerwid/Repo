@@ -16,8 +16,9 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>@item.cliente.nombre @item.cliente.apellido</td>
-                <td>@item.producto.nombre</td>
+                <!-- Mostrar nombre y apellido del cliente -->
+                <td>@item.cliente?.nombre @item.cliente?.apellido</td>
+                <td>@item.producto?.nombre</td>
                 <td>@item.cantidad</td>
                 <td>@item.fecha_agregado</td>
                 <td>@item.estado</td>

@@ -5,8 +5,9 @@
 <p>
     <a asp-action="Create" class="btn btn-primary">Crear Nuevo Producto</a>
 </p>
-<table class="table">
-    <thead>
+
+<table class="table table-bordered table-striped">
+    <thead class="thead-dark">
         <tr>
             <th>Nombre</th>
             <th>Descripción</th>
@@ -22,12 +23,15 @@
             <tr>
                 <td>@item.nombre</td>
                 <td>@item.descripcion</td>
-                <td>@item.precio</td>
+                <td>$@item.precio</td>
                 <td>@item.stock</td>
                 <td>@item.estado</td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.id_producto">Editar</a> |
-                    <a asp-action="Delete" asp-route-id="@item.id_producto">Eliminar</a>
+                    <a asp-action="Edit" asp-route-id="@item.id_producto" class="btn btn-warning btn-sm">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@item.id_producto" class="btn btn-danger btn-sm">Eliminar</a>
+                    <form asp-controller="Carrito" asp-action="Agregar" asp-route-id="@item.id_producto" method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-success btn-sm">Agregar al carrito</button>
+                    </form>
                 </td>
             </tr>
         }

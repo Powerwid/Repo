@@ -17,5 +17,6 @@ namespace SistemaVentas.Models.Entities
         public string? contraseña { get; set; }
         public string? rol { get; set; }
         public string? estado { get; set; }
+
     }
 }
