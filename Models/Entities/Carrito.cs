@@ -15,12 +15,12 @@ namespace SistemaVentas.Models.Entities
         public int producto_id_producto { get; set; }
         public int cantidad { get; set; }
         public DateTime? fecha_agregado { get; set; }
-        public string estado { get; set; }
+        public string? estado { get; set; }
 
         [ForeignKey("clientes_id_cliente")]
-        public Clientes cliente { get; set; }
+        public Clientes? cliente { get; set; }
 
         [ForeignKey("producto_id_producto")]
-        public Producto producto { get; set; }
+        public Producto? producto { get; set; }
     }
 }

@@ -11,14 +11,14 @@ namespace SistemaVentas.Models.Entities
     {
         [Key]
         public int id_producto { get; set; }
-        public string nombre { get; set; }
-        public string descripcion { get; set; }
+        public string? nombre { get; set; }
+        public string? descripcion { get; set; }
         public decimal precio { get; set; }
         public int stock { get; set; }
-        public string estado { get; set; }
+        public string? estado { get; set; }
         public int categoria_id_categoria { get; set; }
 
         [ForeignKey("categoria_id_categoria")]
-        public Categoria categoria { get; set; }
+        public Categoria? categoria { get; set; }
     }
 }

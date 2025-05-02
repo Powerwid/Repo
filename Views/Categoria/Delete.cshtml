@@ -1,0 +1,34 @@
+@model SistemaVentas.Models.Entities.Categoria
+
+@{
+    ViewData["Title"] = "Eliminar Categoría";
+}
+
+<h1>Eliminar Categoría</h1>
+
+<h3>¿Estás seguro de que quieres eliminar esta categoría?</h3>
+
+<div>
+    <h4>Categoría</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @(Model.nombre ?? "Sin nombre")
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+        <dd class="col-sm-10">
+            @(Model.descripcion ?? "Sin descripción")
+        </dd>
+    </dl>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="id_categoria" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary">Volver</a>
+    </form>
+</div>

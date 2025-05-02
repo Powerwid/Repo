@@ -1,8 +1,9 @@
+using System;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using SistemaVentas.Data;
 using SistemaVentas.Models.Entities;
-using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace SistemaVentas.Controllers
 {
@@ -18,10 +19,7 @@ namespace SistemaVentas.Controllers
         // GET: Carrito
         public IActionResult Index()
         {
-            var carritos = _context.carrito
-                .Include(c => c.cliente)
-                .Include(c => c.producto)
-                .ToList();
+            var carritos = _context.Carrito.ToList();
             return View(carritos);
         }
     }

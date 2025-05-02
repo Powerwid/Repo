@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SistemaVentas.Data;
 using SistemaVentas.Models.Entities;
-using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Mvc.Rendering; 
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace SistemaVentas.Controllers
 {
@@ -23,7 +22,7 @@ namespace SistemaVentas.Controllers
         // GET: Producto
         public IActionResult Index()
         {
-            var productos = _context.producto.ToList();
+            var productos = _context.Producto.ToList();
             return View(productos);
         }
 
@@ -31,7 +30,7 @@ namespace SistemaVentas.Controllers
         public IActionResult Create()
         {
             // Cargar las categorías disponibles para el desplegable
-            ViewBag.Categorias = new SelectList(_context.categoria, "id_categoria", "nombre");
+            ViewBag.Categorias = new SelectList(_context.Categoria, "id_categoria", "nombre");
             return View();
         }
 
@@ -55,7 +54,7 @@ namespace SistemaVentas.Controllers
                 }
             }
             // Volver a cargar las categorías en caso de error
-            ViewBag.Categorias = new SelectList(_context.categoria, "id_categoria", "nombre");
+            ViewBag.Categorias = new SelectList(_context.Categoria, "id_categoria", "nombre");
             return View(producto);
         }
 
@@ -67,12 +66,12 @@ namespace SistemaVentas.Controllers
                 return NotFound();
             }
 
-            var producto = _context.producto.Find(id);
+            var producto = _context.Producto.Find(id);
             if (producto == null)
             {
                 return NotFound();
             }
-            ViewBag.Categorias = new SelectList(_context.categoria, "id_categoria", "nombre");
+            ViewBag.Categorias = new SelectList(_context.Categoria, "id_categoria", "nombre");
             return View(producto);
         }
 
@@ -99,7 +98,7 @@ namespace SistemaVentas.Controllers
                     ModelState.AddModelError(string.Empty, "Error al actualizar el producto: " + ex.Message);
                 }
             }
-            ViewBag.Categorias = new SelectList(_context.categoria, "id_categoria", "nombre");
+            ViewBag.Categorias = new SelectList(_context.Categoria, "id_categoria", "nombre");
             return View(producto);
         }
 
@@ -111,7 +110,7 @@ namespace SistemaVentas.Controllers
                 return NotFound();
             }
 
-            var producto = _context.producto.Find(id);
+            var producto = _context.Producto.Find(id);
             if (producto == null)
             {
                 return NotFound();
@@ -124,10 +123,10 @@ namespace SistemaVentas.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            var producto = _context.producto.Find(id);
+            var producto = _context.Producto.Find(id);
             if (producto != null)
             {
-                _context.producto.Remove(producto);
+                _context.Producto.Remove(producto);
                 _context.SaveChanges();
             }
             return RedirectToAction(nameof(Index));

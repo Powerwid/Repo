@@ -6,9 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Agregar servicios al contenedor.
 builder.Services.AddControllersWithViews();
 
-// Configurar el contexto de datos con PostgreSQL
+// Configurar el DbContext para usar SQL Server
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
