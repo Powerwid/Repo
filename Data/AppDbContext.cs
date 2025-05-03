@@ -46,7 +46,7 @@ namespace SistemaVentas.Data
             modelBuilder.Entity<Ventas>().ToTable("ventas");
 
             // Configurar precisión y escala para propiedades decimal
-            modelBuilder.Entity<Clientes>()
+            modelBuilder.Entity<Clientes>().ToTable("Clientes")
                 .Property(c => c.monto_total)
                 .HasPrecision(18, 2);
 
