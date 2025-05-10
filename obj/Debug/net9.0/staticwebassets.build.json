@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DPTIZhKV6aEBtd/cA//0rXJWq796nzuVHsYIbkIs+4o=",
+  "Hash": "PyRP5OJpL9L/XQyMN+ENoR2BNKbtU/p8IO6lv76V1V4=",
   "Source": "SistemaVentas",
   "BasePath": "_content/SistemaVentas",
   "Mode": "Default",
@@ -647,12 +647,12 @@
       "OriginalItemSpec": "C:\\Senati\\repo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\compressed\\iahhdmz0ea-o4m9vgnc6c.gz",
+      "Identity": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\compressed\\iahhdmz0ea-zrp5srtgfy.gz",
       "SourceId": "SistemaVentas",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/SistemaVentas",
-      "RelativePath": "SistemaVentas#[.{fingerprint=o4m9vgnc6c}]?.styles.css.gz",
+      "RelativePath": "SistemaVentas#[.{fingerprint=zrp5srtgfy}]?.styles.css.gz",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Alternative",
@@ -661,8 +661,8 @@
       "RelatedAsset": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\scopedcss\\bundle\\SistemaVentas.styles.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "80axnxaj8a",
-      "Integrity": "6Ks5Grjhj9txVUnBxW/mZDjSxoOa1yi2vLm0ZZSIoEA=",
+      "Fingerprint": "hinm4ropj4",
+      "Integrity": "ibA2N9NYUu0h1Kd62Ix90DaeOzmH4rXXvit9xCJbDdI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\scopedcss\\bundle\\SistemaVentas.styles.css"
@@ -1172,12 +1172,12 @@
       "OriginalItemSpec": "C:\\Senati\\repo\\wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\compressed\\vqk45l12n4-o4m9vgnc6c.gz",
+      "Identity": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\compressed\\vqk45l12n4-zrp5srtgfy.gz",
       "SourceId": "SistemaVentas",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/SistemaVentas",
-      "RelativePath": "SistemaVentas#[.{fingerprint=o4m9vgnc6c}]!.bundle.scp.css.gz",
+      "RelativePath": "SistemaVentas#[.{fingerprint=zrp5srtgfy}]!.bundle.scp.css.gz",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Alternative",
@@ -1186,8 +1186,8 @@
       "RelatedAsset": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\SistemaVentas.bundle.scp.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "80axnxaj8a",
-      "Integrity": "6Ks5Grjhj9txVUnBxW/mZDjSxoOa1yi2vLm0ZZSIoEA=",
+      "Fingerprint": "hinm4ropj4",
+      "Integrity": "ibA2N9NYUu0h1Kd62Ix90DaeOzmH4rXXvit9xCJbDdI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\SistemaVentas.bundle.scp.css"
@@ -1375,8 +1375,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "o4m9vgnc6c",
-      "Integrity": "SAd3BZmZrKBZe+mYyMtu9SMKj4ugwjWoiMLlCdMPjJI=",
+      "Fingerprint": "zrp5srtgfy",
+      "Integrity": "QTavg/dx4eDcqSNMMFxM+uDzBxzbMkC6B59iWSj3VDw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\scopedcss\\bundle\\SistemaVentas.styles.css"
@@ -1396,8 +1396,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "o4m9vgnc6c",
-      "Integrity": "SAd3BZmZrKBZe+mYyMtu9SMKj4ugwjWoiMLlCdMPjJI=",
+      "Fingerprint": "zrp5srtgfy",
+      "Integrity": "QTavg/dx4eDcqSNMMFxM+uDzBxzbMkC6B59iWSj3VDw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\SistemaVentas.bundle.scp.css"
@@ -1443,6 +1443,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Senati\\repo\\wwwroot\\images\\senati.png.png",
+      "SourceId": "SistemaVentas",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Senati\\repo\\wwwroot\\",
+      "BasePath": "_content/SistemaVentas",
+      "RelativePath": "images/senati.png#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "04zhx5fp12",
+      "Integrity": "APGuoWB/A8Qc8ULMygTPDRuAtJyBA+QwVcjID7jK0II=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\senati.png.png"
     },
     {
       "Identity": "C:\\Senati\\repo\\wwwroot\\js\\site.js",
@@ -3320,6 +3341,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0="
+        }
+      ]
+    },
+    {
+      "Route": "images/senati.png.04zhx5fp12.png",
+      "AssetFile": "C:\\Senati\\repo\\wwwroot\\images\\senati.png.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "98437"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"APGuoWB/A8Qc8ULMygTPDRuAtJyBA+QwVcjID7jK0II=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 10 May 2025 16:57:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "04zhx5fp12"
+        },
+        {
+          "Name": "label",
+          "Value": "images/senati.png.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-APGuoWB/A8Qc8ULMygTPDRuAtJyBA+QwVcjID7jK0II="
+        }
+      ]
+    },
+    {
+      "Route": "images/senati.png.png",
+      "AssetFile": "C:\\Senati\\repo\\wwwroot\\images\\senati.png.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "98437"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"APGuoWB/A8Qc8ULMygTPDRuAtJyBA+QwVcjID7jK0II=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 10 May 2025 16:57:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-APGuoWB/A8Qc8ULMygTPDRuAtJyBA+QwVcjID7jK0II="
         }
       ]
     },
@@ -21287,12 +21390,12 @@
     },
     {
       "Route": "SistemaVentas.bundle.scp.css",
-      "AssetFile": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\compressed\\vqk45l12n4-o4m9vgnc6c.gz",
+      "AssetFile": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\compressed\\vqk45l12n4-zrp5srtgfy.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001845018450"
+          "Quality": "0.000956022945"
         }
       ],
       "ResponseHeaders": [
@@ -21302,15 +21405,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "541"
+          "Value": "1045"
         },
         {
           "Name": "ETag",
-          "Value": "\"6Ks5Grjhj9txVUnBxW/mZDjSxoOa1yi2vLm0ZZSIoEA=\""
+          "Value": "\"ibA2N9NYUu0h1Kd62Ix90DaeOzmH4rXXvit9xCJbDdI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 20:10:01 GMT"
+          "Value": "Sat, 10 May 2025 16:47:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21330,13 +21433,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"SAd3BZmZrKBZe+mYyMtu9SMKj4ugwjWoiMLlCdMPjJI=\""
+          "Value": "W/\"QTavg/dx4eDcqSNMMFxM+uDzBxzbMkC6B59iWSj3VDw=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-SAd3BZmZrKBZe+mYyMtu9SMKj4ugwjWoiMLlCdMPjJI="
+          "Value": "sha256-QTavg/dx4eDcqSNMMFxM+uDzBxzbMkC6B59iWSj3VDw="
         }
       ]
     },
@@ -21351,7 +21454,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1133"
+          "Value": "3070"
         },
         {
           "Name": "Content-Type",
@@ -21359,11 +21462,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SAd3BZmZrKBZe+mYyMtu9SMKj4ugwjWoiMLlCdMPjJI=\""
+          "Value": "\"QTavg/dx4eDcqSNMMFxM+uDzBxzbMkC6B59iWSj3VDw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 20:10:01 GMT"
+          "Value": "Sat, 10 May 2025 16:47:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21373,13 +21476,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-SAd3BZmZrKBZe+mYyMtu9SMKj4ugwjWoiMLlCdMPjJI="
+          "Value": "sha256-QTavg/dx4eDcqSNMMFxM+uDzBxzbMkC6B59iWSj3VDw="
         }
       ]
     },
     {
       "Route": "SistemaVentas.bundle.scp.css.gz",
-      "AssetFile": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\compressed\\vqk45l12n4-o4m9vgnc6c.gz",
+      "AssetFile": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\compressed\\vqk45l12n4-zrp5srtgfy.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21388,7 +21491,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "541"
+          "Value": "1045"
         },
         {
           "Name": "Content-Type",
@@ -21396,11 +21499,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"6Ks5Grjhj9txVUnBxW/mZDjSxoOa1yi2vLm0ZZSIoEA=\""
+          "Value": "\"ibA2N9NYUu0h1Kd62Ix90DaeOzmH4rXXvit9xCJbDdI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 20:10:01 GMT"
+          "Value": "Sat, 10 May 2025 16:47:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21418,18 +21521,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-6Ks5Grjhj9txVUnBxW/mZDjSxoOa1yi2vLm0ZZSIoEA="
+          "Value": "sha256-ibA2N9NYUu0h1Kd62Ix90DaeOzmH4rXXvit9xCJbDdI="
         }
       ]
     },
     {
-      "Route": "SistemaVentas.o4m9vgnc6c.bundle.scp.css",
-      "AssetFile": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\compressed\\vqk45l12n4-o4m9vgnc6c.gz",
+      "Route": "SistemaVentas.styles.css",
+      "AssetFile": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\compressed\\iahhdmz0ea-zrp5srtgfy.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001845018450"
+          "Quality": "0.000956022945"
         }
       ],
       "ResponseHeaders": [
@@ -21439,15 +21542,152 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "541"
+          "Value": "1045"
         },
         {
           "Name": "ETag",
-          "Value": "\"6Ks5Grjhj9txVUnBxW/mZDjSxoOa1yi2vLm0ZZSIoEA=\""
+          "Value": "\"ibA2N9NYUu0h1Kd62Ix90DaeOzmH4rXXvit9xCJbDdI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 20:10:01 GMT"
+          "Value": "Sat, 10 May 2025 16:47:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"QTavg/dx4eDcqSNMMFxM+uDzBxzbMkC6B59iWSj3VDw=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QTavg/dx4eDcqSNMMFxM+uDzBxzbMkC6B59iWSj3VDw="
+        }
+      ]
+    },
+    {
+      "Route": "SistemaVentas.styles.css",
+      "AssetFile": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\scopedcss\\bundle\\SistemaVentas.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3070"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QTavg/dx4eDcqSNMMFxM+uDzBxzbMkC6B59iWSj3VDw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 10 May 2025 16:47:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QTavg/dx4eDcqSNMMFxM+uDzBxzbMkC6B59iWSj3VDw="
+        }
+      ]
+    },
+    {
+      "Route": "SistemaVentas.styles.css.gz",
+      "AssetFile": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\compressed\\iahhdmz0ea-zrp5srtgfy.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1045"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ibA2N9NYUu0h1Kd62Ix90DaeOzmH4rXXvit9xCJbDdI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 10 May 2025 16:47:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ibA2N9NYUu0h1Kd62Ix90DaeOzmH4rXXvit9xCJbDdI="
+        }
+      ]
+    },
+    {
+      "Route": "SistemaVentas.zrp5srtgfy.bundle.scp.css",
+      "AssetFile": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\compressed\\vqk45l12n4-zrp5srtgfy.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000956022945"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1045"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ibA2N9NYUu0h1Kd62Ix90DaeOzmH4rXXvit9xCJbDdI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 10 May 2025 16:47:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21467,13 +21707,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"SAd3BZmZrKBZe+mYyMtu9SMKj4ugwjWoiMLlCdMPjJI=\""
+          "Value": "W/\"QTavg/dx4eDcqSNMMFxM+uDzBxzbMkC6B59iWSj3VDw=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "o4m9vgnc6c"
+          "Value": "zrp5srtgfy"
         },
         {
           "Name": "label",
@@ -21481,12 +21721,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-SAd3BZmZrKBZe+mYyMtu9SMKj4ugwjWoiMLlCdMPjJI="
+          "Value": "sha256-QTavg/dx4eDcqSNMMFxM+uDzBxzbMkC6B59iWSj3VDw="
         }
       ]
     },
     {
-      "Route": "SistemaVentas.o4m9vgnc6c.bundle.scp.css",
+      "Route": "SistemaVentas.zrp5srtgfy.bundle.scp.css",
       "AssetFile": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\SistemaVentas.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -21496,7 +21736,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1133"
+          "Value": "3070"
         },
         {
           "Name": "Content-Type",
@@ -21504,11 +21744,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SAd3BZmZrKBZe+mYyMtu9SMKj4ugwjWoiMLlCdMPjJI=\""
+          "Value": "\"QTavg/dx4eDcqSNMMFxM+uDzBxzbMkC6B59iWSj3VDw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 20:10:01 GMT"
+          "Value": "Sat, 10 May 2025 16:47:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21518,7 +21758,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "o4m9vgnc6c"
+          "Value": "zrp5srtgfy"
         },
         {
           "Name": "label",
@@ -21526,13 +21766,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-SAd3BZmZrKBZe+mYyMtu9SMKj4ugwjWoiMLlCdMPjJI="
+          "Value": "sha256-QTavg/dx4eDcqSNMMFxM+uDzBxzbMkC6B59iWSj3VDw="
         }
       ]
     },
     {
-      "Route": "SistemaVentas.o4m9vgnc6c.bundle.scp.css.gz",
-      "AssetFile": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\compressed\\vqk45l12n4-o4m9vgnc6c.gz",
+      "Route": "SistemaVentas.zrp5srtgfy.bundle.scp.css.gz",
+      "AssetFile": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\compressed\\vqk45l12n4-zrp5srtgfy.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21541,7 +21781,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "541"
+          "Value": "1045"
         },
         {
           "Name": "Content-Type",
@@ -21549,11 +21789,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"6Ks5Grjhj9txVUnBxW/mZDjSxoOa1yi2vLm0ZZSIoEA=\""
+          "Value": "\"ibA2N9NYUu0h1Kd62Ix90DaeOzmH4rXXvit9xCJbDdI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 20:10:01 GMT"
+          "Value": "Sat, 10 May 2025 16:47:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21571,7 +21811,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "o4m9vgnc6c"
+          "Value": "zrp5srtgfy"
         },
         {
           "Name": "label",
@@ -21579,18 +21819,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-6Ks5Grjhj9txVUnBxW/mZDjSxoOa1yi2vLm0ZZSIoEA="
+          "Value": "sha256-ibA2N9NYUu0h1Kd62Ix90DaeOzmH4rXXvit9xCJbDdI="
         }
       ]
     },
     {
-      "Route": "SistemaVentas.o4m9vgnc6c.styles.css",
-      "AssetFile": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\compressed\\iahhdmz0ea-o4m9vgnc6c.gz",
+      "Route": "SistemaVentas.zrp5srtgfy.styles.css",
+      "AssetFile": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\compressed\\iahhdmz0ea-zrp5srtgfy.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001845018450"
+          "Quality": "0.000956022945"
         }
       ],
       "ResponseHeaders": [
@@ -21600,15 +21840,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "541"
+          "Value": "1045"
         },
         {
           "Name": "ETag",
-          "Value": "\"6Ks5Grjhj9txVUnBxW/mZDjSxoOa1yi2vLm0ZZSIoEA=\""
+          "Value": "\"ibA2N9NYUu0h1Kd62Ix90DaeOzmH4rXXvit9xCJbDdI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 20:10:01 GMT"
+          "Value": "Sat, 10 May 2025 16:47:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21628,13 +21868,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"SAd3BZmZrKBZe+mYyMtu9SMKj4ugwjWoiMLlCdMPjJI=\""
+          "Value": "W/\"QTavg/dx4eDcqSNMMFxM+uDzBxzbMkC6B59iWSj3VDw=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "o4m9vgnc6c"
+          "Value": "zrp5srtgfy"
         },
         {
           "Name": "label",
@@ -21642,12 +21882,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-SAd3BZmZrKBZe+mYyMtu9SMKj4ugwjWoiMLlCdMPjJI="
+          "Value": "sha256-QTavg/dx4eDcqSNMMFxM+uDzBxzbMkC6B59iWSj3VDw="
         }
       ]
     },
     {
-      "Route": "SistemaVentas.o4m9vgnc6c.styles.css",
+      "Route": "SistemaVentas.zrp5srtgfy.styles.css",
       "AssetFile": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\scopedcss\\bundle\\SistemaVentas.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -21657,7 +21897,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1133"
+          "Value": "3070"
         },
         {
           "Name": "Content-Type",
@@ -21665,11 +21905,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"SAd3BZmZrKBZe+mYyMtu9SMKj4ugwjWoiMLlCdMPjJI=\""
+          "Value": "\"QTavg/dx4eDcqSNMMFxM+uDzBxzbMkC6B59iWSj3VDw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 20:10:01 GMT"
+          "Value": "Sat, 10 May 2025 16:47:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21679,7 +21919,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "o4m9vgnc6c"
+          "Value": "zrp5srtgfy"
         },
         {
           "Name": "label",
@@ -21687,13 +21927,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-SAd3BZmZrKBZe+mYyMtu9SMKj4ugwjWoiMLlCdMPjJI="
+          "Value": "sha256-QTavg/dx4eDcqSNMMFxM+uDzBxzbMkC6B59iWSj3VDw="
         }
       ]
     },
     {
-      "Route": "SistemaVentas.o4m9vgnc6c.styles.css.gz",
-      "AssetFile": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\compressed\\iahhdmz0ea-o4m9vgnc6c.gz",
+      "Route": "SistemaVentas.zrp5srtgfy.styles.css.gz",
+      "AssetFile": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\compressed\\iahhdmz0ea-zrp5srtgfy.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -21702,7 +21942,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "541"
+          "Value": "1045"
         },
         {
           "Name": "Content-Type",
@@ -21710,11 +21950,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"6Ks5Grjhj9txVUnBxW/mZDjSxoOa1yi2vLm0ZZSIoEA=\""
+          "Value": "\"ibA2N9NYUu0h1Kd62Ix90DaeOzmH4rXXvit9xCJbDdI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 20:10:01 GMT"
+          "Value": "Sat, 10 May 2025 16:47:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21732,7 +21972,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "o4m9vgnc6c"
+          "Value": "zrp5srtgfy"
         },
         {
           "Name": "label",
@@ -21740,144 +21980,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-6Ks5Grjhj9txVUnBxW/mZDjSxoOa1yi2vLm0ZZSIoEA="
-        }
-      ]
-    },
-    {
-      "Route": "SistemaVentas.styles.css",
-      "AssetFile": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\compressed\\iahhdmz0ea-o4m9vgnc6c.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.001845018450"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "541"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6Ks5Grjhj9txVUnBxW/mZDjSxoOa1yi2vLm0ZZSIoEA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 20:10:01 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"SAd3BZmZrKBZe+mYyMtu9SMKj4ugwjWoiMLlCdMPjJI=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-SAd3BZmZrKBZe+mYyMtu9SMKj4ugwjWoiMLlCdMPjJI="
-        }
-      ]
-    },
-    {
-      "Route": "SistemaVentas.styles.css",
-      "AssetFile": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\scopedcss\\bundle\\SistemaVentas.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1133"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"SAd3BZmZrKBZe+mYyMtu9SMKj4ugwjWoiMLlCdMPjJI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 20:10:01 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-SAd3BZmZrKBZe+mYyMtu9SMKj4ugwjWoiMLlCdMPjJI="
-        }
-      ]
-    },
-    {
-      "Route": "SistemaVentas.styles.css.gz",
-      "AssetFile": "C:\\Senati\\repo\\obj\\Debug\\net9.0\\compressed\\iahhdmz0ea-o4m9vgnc6c.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "541"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6Ks5Grjhj9txVUnBxW/mZDjSxoOa1yi2vLm0ZZSIoEA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 20:10:01 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-6Ks5Grjhj9txVUnBxW/mZDjSxoOa1yi2vLm0ZZSIoEA="
+          "Value": "sha256-ibA2N9NYUu0h1Kd62Ix90DaeOzmH4rXXvit9xCJbDdI="
         }
       ]
     }

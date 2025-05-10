@@ -1,50 +1,142 @@
 /* _content/SistemaVentas/Views/Shared/_Layout.cshtml.rz.scp.css */
-/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+/* Estilos generales del layout */
 
-a.navbar-brand[b-hh7t54o8my] {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+/* Fuentes, márgenes y espaciado */
+body[b-hh7t54o8my] {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
 }
 
-a[b-hh7t54o8my] {
-  color: #0077cc;
+/* Barra de navegación */
+.navbar[b-hh7t54o8my] {
+    border-bottom: 2px solid #e5e5e5;
+    padding: 0.8rem 1rem;
 }
 
+.navbar-brand[b-hh7t54o8my] {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    word-break: break-word;
+}
+
+/* Estilo para los enlaces de navegación */
+.nav-link[b-hh7t54o8my] {
+    font-size: 1rem;
+    color: #ffffff !important;
+    padding: 0.75rem 1.25rem;
+}
+
+.nav-link:hover[b-hh7t54o8my] {
+    color: #ffc107 !important;
+    background-color: #343a40;
+    border-radius: 0.25rem;
+}
+
+/* Botón principal */
 .btn-primary[b-hh7t54o8my] {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+    transition: background-color 0.3s ease;
 }
 
-.nav-pills .nav-link.active[b-hh7t54o8my], .nav-pills .show > .nav-link[b-hh7t54o8my] {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.btn-primary:hover[b-hh7t54o8my] {
+    background-color: #155fa0;
+    border-color: #144f8c;
 }
 
-.border-top[b-hh7t54o8my] {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom[b-hh7t54o8my] {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow[b-hh7t54o8my] {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy[b-hh7t54o8my] {
-  font-size: 1rem;
-  line-height: inherit;
+/* Estilos para la vista principal */
+main[b-hh7t54o8my] {
+    background-color: #ffffff;
+    padding: 40px 0;
+    min-height: 60vh;
+    margin-top: 20px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
 }
 
+/* Contenido de las tarjetas o contenedores */
+.card[b-hh7t54o8my] {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover[b-hh7t54o8my] {
+    transform: scale(1.05);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Enlaces de la barra de navegación */
+a[b-hh7t54o8my] {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+a:hover[b-hh7t54o8my] {
+    text-decoration: underline;
+}
+
+/* Footer */
 .footer[b-hh7t54o8my] {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 1rem 0;
+    line-height: 1.5;
+    border-top: 1px solid #e5e5e5;
+    margin-top: auto;
 }
 
+/* Border top and bottom */
+.border-top[b-hh7t54o8my] {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom[b-hh7t54o8my] {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Caja con sombra */
+.box-shadow[b-hh7t54o8my] {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, 0.05);
+}
+
+/* Aceptación de políticas */
+button.accept-policy[b-hh7t54o8my] {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .navbar[b-hh7t54o8my] {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-brand[b-hh7t54o8my] {
+        font-size: 1.25rem;
+    }
+
+    .nav-link[b-hh7t54o8my] {
+        font-size: 0.9rem;
+    }
+
+    main[b-hh7t54o8my] {
+        padding: 20px 0;
+    }
+}
+
+/* Asegurarse de que el pie de página quede al final de la página */
+body[b-hh7t54o8my] {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main[b-hh7t54o8my] {
+    flex-grow: 1;
+}

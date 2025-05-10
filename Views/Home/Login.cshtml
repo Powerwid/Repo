@@ -4,33 +4,46 @@
     ViewData["Title"] = "Iniciar sesión";
 }
 
-<h2>Iniciar sesión</h2>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Iniciar sesión</h2>
 
-@if (ViewData["Error"] != null)
-{
-    <div class="alert alert-danger">
-        @ViewData["Error"]
+                    @if (ViewData["Error"] != null)
+                    {
+                        <div class="alert alert-danger">
+                            @ViewData["Error"]
+                        </div>
+                    }
+
+                    <form asp-action="Login" method="post" novalidate>
+                        <div class="mb-3">
+                            <label asp-for="correo" class="form-label">Correo electrónico</label>
+                            <input asp-for="correo" class="form-control" required />
+                            <span asp-validation-for="correo" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="telefono" class="form-label">Teléfono</label>
+                            <input asp-for="telefono" class="form-control" required />
+                            <span asp-validation-for="telefono" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                        </div>
+                    </form>
+
+                    <hr />
+
+                    <p class="text-center">
+                        ¿No tienes cuenta?
+                        <a href="@Url.Action("Create", "Clientes")">Regístrate aquí</a>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-}
-
-<form asp-action="Login" method="post">
-    <div class="form-group">
-        <label asp-for="correo">Correo</label>
-        <input asp-for="correo" class="form-control" required />
-        <span asp-validation-for="correo" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="telefono">Teléfono</label>
-        <input asp-for="telefono" class="form-control" required />
-        <span asp-validation-for="telefono" class="text-danger"></span>
-    </div>
-
-    <button type="submit" class="btn btn-primary mt-2">Iniciar sesión</button>
-</form>
-
-<br>
-
-<p>No tienes cuenta? <a href="@Url.Action("Create", "Clientes")">Crear cuenta</a></p>
-
-<!-- Enlace para ir a la página de registro si no se tiene cuenta -->
+</div>

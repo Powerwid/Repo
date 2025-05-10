@@ -448,8 +448,6 @@ C:\Senati\repo\obj\Debug\net9.0\compressed\9v4h494vuy-jjsuc0puko.gz
 C:\Senati\repo\obj\Debug\net9.0\compressed\9h9ub212dt-9vr69e8ynj.gz
 C:\Senati\repo\obj\Debug\net9.0\compressed\xui157h9pt-87fc7y1x7t.gz
 C:\Senati\repo\obj\Debug\net9.0\compressed\hdcj8rsin3-mlv21k5csn.gz
-C:\Senati\repo\obj\Debug\net9.0\compressed\iahhdmz0ea-o4m9vgnc6c.gz
-C:\Senati\repo\obj\Debug\net9.0\compressed\vqk45l12n4-o4m9vgnc6c.gz
 C:\Senati\repo\obj\Debug\net9.0\staticwebassets.build.json
 C:\Senati\repo\obj\Debug\net9.0\staticwebassets.development.json
 C:\Senati\repo\obj\Debug\net9.0\staticwebassets.build.endpoints.json
@@ -466,3 +464,5 @@ C:\Senati\repo\obj\Debug\net9.0\SistemaVentas.pdb
 C:\Senati\repo\obj\Debug\net9.0\SistemaVentas.genruntimeconfig.cache
 C:\Senati\repo\obj\Debug\net9.0\ref\SistemaVentas.dll
 C:\Senati\repo\obj\Debug\net9.0\compressed\9yogbougz8-p134z8rkn3.gz
+C:\Senati\repo\obj\Debug\net9.0\compressed\iahhdmz0ea-zrp5srtgfy.gz
+C:\Senati\repo\obj\Debug\net9.0\compressed\vqk45l12n4-zrp5srtgfy.gz

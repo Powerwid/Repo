@@ -2,11 +2,66 @@
     ViewData["Title"] = "Inicio";
 }
 
-<div class="home-container">
-    <div class="home-card">
-        <h1 class="home-title">Tienda Online</h1>
-        <p class="home-subtitle">Bienvenido al Sistema de Ventas</p>
-        <p class="home-description">Gestiona productos, categorías y más desde una interfaz sencilla y poderosa.</p>
-        <a href="/Producto" class="home-button">Explorar Productos</a>
+<!-- Sección de bienvenida con imagen de fondo -->
+<div class="container-fluid bg-dark text-white py-5" style="background-image: url('/images/senati.png'); background-size: cover; background-position: center;">
+    <div class="text-center">
+        <h1 class="display-4 text-shadow">Senati Store</h1>
+        <p class="lead">Productos de calidad a los mejores precios</p>
+        <a href="/Producto" class="btn btn-primary btn-lg mt-3">Explorar Productos</a>
+    </div>
+</div>
+
+
+<div class="container py-5 bg-light">
+    <h2 class="text-center mb-4">Testimonios</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">"Me encantó la experiencia de compra. ¡Todo fue rápido y sencillo!"</p>
+                    <footer class="blockquote-footer">Juan Pérez</footer>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">"Excelente calidad de productos, ¡sin duda volveré a comprar!"</p>
+                    <footer class="blockquote-footer">María López</footer>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">"Servicio al cliente increíble y productos de alta calidad."</p>
+                    <footer class="blockquote-footer">Carlos García</footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container py-5">
+    <h2 class="text-center mb-4">¿Por qué elegirnos?</h2>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <i class="fas fa-truck fa-3x text-primary"></i>
+            <h4 class="mt-3">Envío Rápido</h4>
+            <p>Recibe tus productos en tiempo récord, directamente en tu hogar.</p>
+        </div>
+        <div class="col-md-4">
+            <i class="fas fa-headset fa-3x text-primary"></i>
+            <h4 class="mt-3">Soporte 24/7</h4>
+            <p>Estamos disponibles para ayudarte en cualquier momento del día.</p>
+        </div>
+        <div class="col-md-4">
+            <i class="fas fa-gift fa-3x text-primary"></i>
+            <h4 class="mt-3">Ofertas Especiales</h4>
+            <p>Disfruta de descuentos exclusivos y promociones limitadas.</p>
+        </div>
     </div>
 </div>

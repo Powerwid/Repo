@@ -28,6 +28,7 @@ namespace SistemaVentas.Data
         public DbSet<Usuario> Usuario { get; set; }
         public DbSet<Ventas> Ventas { get; set; }
 
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Configurar nombres de tablas
