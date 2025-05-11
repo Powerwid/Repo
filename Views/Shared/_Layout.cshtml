@@ -3,38 +3,37 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Tienda</title>
+    <title>Iniciar sesión - Tienda</title>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css?v=k0RQU0cLkhCneuj2T8refh63RHH-2-rvGc1G2SEzywo" />
 </head>
 <body class="d-flex flex-column min-vh-100">
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
-            <div class="container">
-                <a class="navbar-brand fw-bold" asp-controller="Home" asp-action="Index">Sistema de Ventas</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+    <header b-hh7t54o8my>
+        <nav b-hh7t54o8my class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+            <div b-hh7t54o8my class="container">
+                <a class="navbar-brand fw-bold" href="/">Sistema de Ventas</a>
+                <button b-hh7t54o8my class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span b-hh7t54o8my class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Home" asp-action="Index">Inicio</a>
+                <div b-hh7t54o8my class="collapse navbar-collapse" id="navbarNav">
+                    <ul b-hh7t54o8my class="navbar-nav ms-auto">
+                        <li b-hh7t54o8my class="nav-item">
+                            <a class="nav-link" href="/">Inicio</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Producto" asp-action="Index">Productos</a>
+                        <li b-hh7t54o8my class="nav-item">
+                            <a class="nav-link" href="/Producto">Productos</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Categoria" asp-action="Index">Categorías</a>
+                        <li b-hh7t54o8my class="nav-item">
+                            <a class="nav-link" href="/Categoria">Categorías</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Carrito" asp-action="Index">Carrito</a>
+                        <li b-hh7t54o8my class="nav-item">
+                            <a class="nav-link" href="/Carrito">Carrito</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Login" asp-action="Index">Iniciar sesión</a>
+                        <li b-hh7t54o8my class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Login">Iniciar sesión</a>
                         </li>
                     </ul>
                 </div>
@@ -42,19 +41,19 @@
         </nav>
     </header>
 
-    <main role="main" class="flex-grow-1 container py-4">
+    <main b-hh7t54o8my role="main" class="flex-grow-1 container py-4">
         @RenderBody()
     </main>
 
-    <footer class="bg-light text-center text-muted py-3 mt-auto border-top">
-        <div class="container">
-            &copy; 2025 - Sistema de Ventas
+    <footer b-hh7t54o8my class="bg-light text-center text-muted py-3 mt-auto border-top">
+        <div b-hh7t54o8my class="container">
+            © 2025 - Sistema de Ventas
         </div>
     </footer>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
