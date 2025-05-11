@@ -36,3 +36,12 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Duración de la sesión: 30 minutos
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+app.UseSession(); // Añadir esto en la pipeline de middleware

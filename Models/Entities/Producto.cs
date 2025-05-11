@@ -20,5 +20,7 @@ namespace SistemaVentas.Models.Entities
 
         [ForeignKey("categoria_id_categoria")]
         public Categoria? categoria { get; set; }
+
+        public virtual ICollection<DetalleCompra> DetalleCompra { get; set; }
     }
 }

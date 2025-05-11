@@ -1,28 +1,78 @@
-@model IEnumerable<SistemaVentas.Models.Entities.Carrito>
+@model List<(SistemaVentas.Models.Entities.Producto Producto, int Cantidad)>
 
-<h1>Carrito de Compras</h1>
+@{
+    ViewData["Title"] = "Carrito de Compras";
+}
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Cliente</th>
-            <th>Producto</th>
-            <th>Cantidad</th>
-            <th>Fecha Agregado</th>
-            <th>Estado</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <!-- Mostrar nombre y apellido del cliente -->
-                <td>@item.cliente?.nombre @item.cliente?.apellido</td>
-                <td>@item.producto?.nombre</td>
-                <td>@item.cantidad</td>
-                <td>@item.fecha_agregado</td>
-                <td>@item.estado</td>
-            </tr>
-        }
-    </tbody>
-</table>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Carrito de Compras</h2>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Success"]
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+
+    @if (Model.Any())
+    {
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio Unitario</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Producto.nombre</td>
+                        <td>S/ @item.Producto.precio</td>
+                        <td>@item.Cantidad</td>
+                        <td>S/ @(item.Producto.precio * item.Cantidad)</td>
+                        <td>
+                            <form asp-action="Eliminar" method="post">
+                                <input type="hidden" name="productId" value="@item.Producto.id_producto" />
+                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <h3 class="text-end">Total: S/ @ViewBag.Total</h3>
+
+        <form asp-action="ConfirmarCompra" method="post">
+            <div class="mb-3">
+                <label for="metodoPago" class="form-label">Método de Pago</label>
+                <select name="metodoPago" class="form-control" required>
+                    <option value="Tarjeta">Tarjeta de Crédito/Débito</option>
+                    <option value="Transferencia">Transferencia Bancaria</option>
+                    <option value="Yape">Yape</option>
+                </select>
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Confirmar Compra</button>
+            </div>
+        </form>
+    }
+    else
+    {
+        <p class="text-center">Tu carrito está vacío.</p>
+        <div class="text-center">
+            <a href="@Url.Action("Index", "Producto")" class="btn btn-primary">Explorar Productos</a>
+        </div>
+    }
+</div>

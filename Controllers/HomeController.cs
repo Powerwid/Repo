@@ -1,81 +1,98 @@
 using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
-using SistemaVentas.Models;
-using SistemaVentas.Data;
-using SistemaVentas.Models.Entities;
-using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
+   using Microsoft.AspNetCore.Mvc;
+   using SistemaVentas.Models;
+   using SistemaVentas.Data;
+   using SistemaVentas.Models.Entities;
+   using Microsoft.AspNetCore.Http;
+   using Microsoft.EntityFrameworkCore;
 
-namespace SistemaVentas.Controllers{
-    public class HomeController : Controller{
-        private readonly ILogger<HomeController> _logger;
-        private readonly AppDbContext _context;
-        public HomeController(ILogger<HomeController> logger, AppDbContext context){
-            _logger = logger;
-            _context = context;
-        }
+   namespace SistemaVentas.Controllers
+   {
+       public class HomeController : Controller
+       {
+           private readonly ILogger<HomeController> _logger;
+           private readonly AppDbContext _context;
 
-        public IActionResult Index(){
-            if (HttpContext.Session.GetInt32("ClienteId") == null){
-                return RedirectToAction("Login");
-            }
+           public HomeController(ILogger<HomeController> logger, AppDbContext context)
+           {
+               _logger = logger;
+               _context = context;
+           }
 
-            return View();
-        }
+           public IActionResult Index()
+           {
+               if (HttpContext.Session.GetInt32("ClienteId") == null)
+               {
+                   return RedirectToAction("Login");
+               }
 
-        public IActionResult Login(){
-            return View();
-        }
+               return View();
+           }
 
-        [HttpPost]
-        public IActionResult Login(Clientes cliente){
-            if (ModelState.IsValid){
-                var clienteExistente = _context.Clientes.FirstOrDefault(c => c.correo == cliente.correo && c.telefono == cliente.telefono);
+           public IActionResult Login()
+           {
+               return View();
+           }
 
-                if (clienteExistente != null){
-                    HttpContext.Session.SetInt32("ClienteId", clienteExistente.id_cliente);
+           [HttpPost]
+           public IActionResult Login(Clientes cliente)
+           {
+               if (ModelState.IsValid)
+               {
+                   var clienteExistente = _context.Clientes.FirstOrDefault(c => c.correo == cliente.correo && c.telefono == cliente.telefono);
 
-                    return RedirectToAction("Index", "Home");
-                }
-                else{
-                    ViewData["Error"] = "Correo o teléfono incorrectos.";
-                }
-            }
+                   if (clienteExistente != null)
+                   {
+                       HttpContext.Session.SetInt32("ClienteId", clienteExistente.id_cliente);
 
-            return View(cliente);
-        }
-        public IActionResult Create(){
-            return View();
-        }
+                       return RedirectToAction("Index", "Home");
+                   }
+                   else
+                   {
+                       ViewData["Error"] = "Correo o teléfono incorrectos.";
+                   }
+               }
 
-        [HttpPost]
-        public IActionResult Create(Clientes cliente){
-    if (ModelState.IsValid){
-        _context.Clientes.Add(cliente);
-        _context.SaveChanges();
+               return View(cliente);
+           }
 
-        if (cliente.id_cliente > 0){
-            HttpContext.Session.SetInt32("ClienteId", cliente.id_cliente);
+           public IActionResult Create()
+           {
+               return View();
+           }
 
-            return RedirectToAction("Index", "Home");
-        }
-        else{
-            ViewData["Error"] = "Hubo un problema al crear la cuenta. Por favor, inténtelo de nuevo.";
-        }
-    }
+           [HttpPost]
+           public IActionResult Create(Clientes cliente)
+           {
+               if (ModelState.IsValid)
+               {
+                   _context.Clientes.Add(cliente);
+                   _context.SaveChanges();
 
-    return View(cliente);
-}
+                   if (cliente.id_cliente > 0)
+                   {
+                       HttpContext.Session.SetInt32("ClienteId", cliente.id_cliente);
 
-        public IActionResult Privacy(){
-            return View();
-        }
+                       return RedirectToAction("Index", "Home");
+                   }
+                   else
+                   {
+                       ViewData["Error"] = "Hubo un problema al crear la cuenta. Por favor, inténtelo de nuevo.";
+                   }
+               }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error(){
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+               return View(cliente);
+           }
 
+           public IActionResult Privacy()
+           {
+               return View();
+           }
 
-    }
-}
+           [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+           public IActionResult Error()
+           {
+               return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+           }
+       }
+   }

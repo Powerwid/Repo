@@ -23,13 +23,14 @@
             <tr>
                 <td>@item.nombre</td>
                 <td>@item.descripcion</td>
-                <td>$@item.precio</td>
+                <td>S/ @item.precio</td>
                 <td>@item.stock</td>
                 <td>@item.estado</td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.id_producto" class="btn btn-warning btn-sm">Editar</a>
                     <a asp-action="Delete" asp-route-id="@item.id_producto" class="btn btn-danger btn-sm">Eliminar</a>
-                    <form asp-controller="Carrito" asp-action="Agregar" asp-route-id="@item.id_producto" method="post" style="display:inline;">
+                    <form asp-controller="Carrito" asp-action="Agregar" method="post" style="display:inline;">
+                        <input type="hidden" name="id" value="@item.id_producto" />
                         <button type="submit" class="btn btn-success btn-sm">Agregar al carrito</button>
                     </form>
                 </td>

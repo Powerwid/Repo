@@ -11,12 +11,14 @@ namespace SistemaVentas.Models.Entities
     {
         [Key]
         public int id_compra { get; set; }
-        public int usuario_id_usuario { get; set; }
+        public int cliente_id_cliente { get; set; }
         public DateTime? fecha_compra { get; set; }
         public decimal monto_total { get; set; }
         public string estado { get; set; }
 
-        [ForeignKey("usuario_id_usuario")]
-        public Usuario usuario { get; set; }
+        [ForeignKey("cliente_id_cliente")]
+        public Clientes cliente { get; set; }
+
+        public List<DetalleCompra> DetalleCompra { get; set; }
     }
 }
