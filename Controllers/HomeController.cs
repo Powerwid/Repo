@@ -88,7 +88,9 @@ namespace SistemaVentas.Controllers
         public IActionResult Logout()
         {
             HttpContext.Session.Remove("ClienteId");
-            return RedirectToAction("Login");
+            return RedirectToAction("Index", "Home");
+
+            
         }
 
         public IActionResult Privacy()
