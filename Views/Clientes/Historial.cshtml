@@ -40,6 +40,7 @@
                         <td>S/ @compra.monto_total</td>
                         <td>@compra.estado</td>
                         <td>
+                            <p><strong>Cliente:</strong> @(compra.cliente?.nombre ?? "Desconocido")</p>
                             <ul>
                                 @foreach (var detalle in compra.DetalleCompra)
                                 {

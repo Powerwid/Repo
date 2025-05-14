@@ -32,9 +32,23 @@
                         <li b-hh7t54o8my class="nav-item">
                             <a class="nav-link" href="/Carrito">Carrito</a>
                         </li>
-                        <li b-hh7t54o8my class="nav-item">
+                        @if (Context.Session.GetInt32("ClienteId") == null)
+                        {
+                          <li b-hh7t54o8my class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Login">Iniciar sesión</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li b-hh7t54o8my class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Clientes" asp-action="Historial">Historial</a>
+                            </li>
+                        <li b-hh7t54o8my class="nav-item">
+                                <form asp-action="Logout" method="post" class="d-inline">
+                                    <button type="submit" class="nav-link" style="background:none; border:none; color:#fff; cursor:pointer;">Cerrar sesión</button>
+                                </form>
                         </li>
+                        }
                     </ul>
                 </div>
             </div>
