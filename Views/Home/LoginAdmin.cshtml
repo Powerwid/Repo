@@ -11,6 +11,13 @@
                 <div class="card-body">
                     <h2 class="card-title text-center mb-4">Administrador - Iniciar sesión</h2>
 
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="alert alert-success">
+                            @TempData["Success"]
+                        </div>
+                    }
+
                     @if (ViewData["Error"] != null)
                     {
                         <div class="alert alert-danger">
@@ -18,7 +25,7 @@
                         </div>
                     }
 
-                    <form asp-action="LoginAdmin" method="post" novalidate>
+                    <form asp-action="LoginAdmin" method="post">
                         <div class="mb-3">
                             <label asp-for="usuario" class="form-label">Usuario</label>
                             <input asp-for="usuario" class="form-control" required />
@@ -38,8 +45,15 @@
 
                     <hr />
                     <p class="text-center text-muted">Solo para uso administrativo</p>
+                    <p class="text-center">
+                        <a href="@Url.Action("Login", "Home")" class="text-decoration-underline">Volver al inicio de sesión de clientes</a>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

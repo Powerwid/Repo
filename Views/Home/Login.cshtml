@@ -11,6 +11,13 @@
                 <div class="card-body">
                     <h2 class="card-title text-center mb-4">Iniciar sesión</h2>
 
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="alert alert-success">
+                            @TempData["Success"]
+                        </div>
+                    }
+
                     @if (ViewData["Error"] != null)
                     {
                         <div class="alert alert-danger">
@@ -18,7 +25,7 @@
                         </div>
                     }
 
-                    <form asp-action="Login" method="post" novalidate>
+                    <form asp-action="Login" method="post">
                         <div class="mb-3">
                             <label asp-for="correo" class="form-label">Correo electrónico</label>
                             <input asp-for="correo" class="form-control" required />
@@ -52,3 +59,7 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -48,7 +48,6 @@ namespace SistemaVentas.Controllers
                 {
                     HttpContext.Session.SetInt32("ClienteId", clienteExistente.id_cliente);
                     HttpContext.Session.SetString("UsuarioRol", "Cliente"); // Guardar rol
-
                     return RedirectToAction("Index", "Home");
                 }
 
@@ -76,7 +75,6 @@ namespace SistemaVentas.Controllers
                 {
                     HttpContext.Session.SetInt32("UsuarioId", user.id_usuario);
                     HttpContext.Session.SetString("UsuarioRol", user.rol ?? "Administrador"); // Guardar rol
-
                     return RedirectToAction("Index", "Home");
                 }
 
@@ -104,7 +102,6 @@ namespace SistemaVentas.Controllers
                 {
                     HttpContext.Session.SetInt32("ClienteId", cliente.id_cliente);
                     HttpContext.Session.SetString("UsuarioRol", "Cliente");
-
                     return RedirectToAction("Index", "Home");
                 }
 
@@ -116,10 +113,13 @@ namespace SistemaVentas.Controllers
 
         // Cerrar sesión (limpiar sesión)
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Logout()
         {
+            // Limpiar todas las claves de la sesión
             HttpContext.Session.Clear();
-            return RedirectToAction("Index", "Home");
+            TempData["Success"] = "Sesión cerrada con éxito.";
+            return RedirectToAction("Login", "Home"); // Redirigir directamente a Login
         }
 
         public IActionResult NoAutorizado()
