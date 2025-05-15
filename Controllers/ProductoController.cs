@@ -7,6 +7,7 @@ using SistemaVentas.Data;
 using SistemaVentas.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Http;
 
 namespace SistemaVentas.Controllers
 {
@@ -19,9 +20,20 @@ namespace SistemaVentas.Controllers
             _context = context;
         }
 
+        // Método auxiliar para validar si el usuario es Administrador
+        private bool IsAdmin()
+        {
+            var rol = HttpContext.Session.GetString("UsuarioRol");
+            return rol == "Administrador";
+        }
+
         // GET: Producto
         public IActionResult Index()
         {
+            // Obtener el rol desde sesión y pasarlo a la vista
+            var rol = HttpContext.Session.GetString("UsuarioRol") ?? "Cliente";
+            ViewBag.UsuarioRol = rol;
+
             var productos = _context.Producto.ToList();
             return View(productos);
         }
@@ -29,7 +41,9 @@ namespace SistemaVentas.Controllers
         // GET: Producto/Create
         public IActionResult Create()
         {
-            // Cargar las categorías disponibles para el desplegable
+            if (!IsAdmin())
+                return RedirectToAction("Index");
+
             ViewBag.Categorias = new SelectList(_context.Categoria, "id_categoria", "nombre");
             return View();
         }
@@ -39,6 +53,9 @@ namespace SistemaVentas.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Producto producto)
         {
+            if (!IsAdmin())
+                return RedirectToAction("Index");
+
             if (ModelState.IsValid)
             {
                 try
@@ -49,11 +66,9 @@ namespace SistemaVentas.Controllers
                 }
                 catch (Exception ex)
                 {
-                    // Mostrar el error al usuario
                     ModelState.AddModelError(string.Empty, "Error al guardar el producto: " + ex.Message);
                 }
             }
-            // Volver a cargar las categorías en caso de error
             ViewBag.Categorias = new SelectList(_context.Categoria, "id_categoria", "nombre");
             return View(producto);
         }
@@ -61,16 +76,16 @@ namespace SistemaVentas.Controllers
         // GET: Producto/Edit/5
         public IActionResult Edit(int? id)
         {
+            if (!IsAdmin())
+                return RedirectToAction("Index");
+
             if (id == null)
-            {
                 return NotFound();
-            }
 
             var producto = _context.Producto.Find(id);
             if (producto == null)
-            {
                 return NotFound();
-            }
+
             ViewBag.Categorias = new SelectList(_context.Categoria, "id_categoria", "nombre");
             return View(producto);
         }
@@ -80,10 +95,11 @@ namespace SistemaVentas.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, Producto producto)
         {
+            if (!IsAdmin())
+                return RedirectToAction("Index");
+
             if (id != producto.id_producto)
-            {
                 return NotFound();
-            }
 
             if (ModelState.IsValid)
             {
@@ -105,16 +121,16 @@ namespace SistemaVentas.Controllers
         // GET: Producto/Delete/5
         public IActionResult Delete(int? id)
         {
+            if (!IsAdmin())
+                return RedirectToAction("Index");
+
             if (id == null)
-            {
                 return NotFound();
-            }
 
             var producto = _context.Producto.Find(id);
             if (producto == null)
-            {
                 return NotFound();
-            }
+
             return View(producto);
         }
 
@@ -123,6 +139,9 @@ namespace SistemaVentas.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
+            if (!IsAdmin())
+                return RedirectToAction("Index");
+
             var producto = _context.Producto.Find(id);
             if (producto != null)
             {

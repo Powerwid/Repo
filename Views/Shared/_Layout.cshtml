@@ -1,53 +1,91 @@
-﻿<!DOCTYPE html>
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iniciar sesión - Tienda</title>
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/css/site.css?v=k0RQU0cLkhCneuj2T8refh63RHH-2-rvGc1G2SEzywo" />
+    <link rel="stylesheet" href="/css/site.css" />
+
+    <style>
+        .btn-no-outline:focus,
+        .btn-no-outline:active {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        .nav-link-button {
+            background: none;
+            border: none;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            padding-top: 8px; 
+        }
+
+        .nav-link-button:hover {
+            text-decoration: none;
+            color: #dcdcdc;
+        }
+    </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
-    <header b-hh7t54o8my>
-        <nav b-hh7t54o8my class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
-            <div b-hh7t54o8my class="container">
+    @{
+        var rol = HttpContextAccessor.HttpContext.Session.GetString("UsuarioRol");
+        var clienteId = HttpContextAccessor.HttpContext.Session.GetInt32("ClienteId");
+        var usuarioId = HttpContextAccessor.HttpContext.Session.GetInt32("UsuarioId");
+    }
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+            <div class="container">
                 <a class="navbar-brand fw-bold" href="/">Sistema de Ventas</a>
-                <button b-hh7t54o8my class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span b-hh7t54o8my class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <div b-hh7t54o8my class="collapse navbar-collapse" id="navbarNav">
-                    <ul b-hh7t54o8my class="navbar-nav ms-auto">
-                        <li b-hh7t54o8my class="nav-item">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
                             <a class="nav-link" href="/">Inicio</a>
                         </li>
-                        <li b-hh7t54o8my class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="/Producto">Productos</a>
                         </li>
-                        <li b-hh7t54o8my class="nav-item">
-                            <a class="nav-link" href="/Categoria">Categorías</a>
-                        </li>
-                        <li b-hh7t54o8my class="nav-item">
+                        @if (rol == "Administrador")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Categoria">Categorías</a>
+                            </li>
+                        }
+                        <li class="nav-item">
                             <a class="nav-link" href="/Carrito">Carrito</a>
                         </li>
-                        @if (Context.Session.GetInt32("ClienteId") == null)
+
+                        @if (clienteId == null && usuarioId == null)
                         {
-                          <li b-hh7t54o8my class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Login">Iniciar sesión</a>
+                            <li class="nav-item ms-3">
+                                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Login">Iniciar sesión</a>
                             </li>
                         }
                         else
                         {
-                            <li b-hh7t54o8my class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="Clientes" asp-action="Historial">Historial</a>
-                            </li>
-                        <li b-hh7t54o8my class="nav-item">
+                            @if (clienteId != null)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="Clientes" asp-action="Historial">Historial</a>
+                                </li>
+                            }
+
+                            <li class="nav-item ms-3">
                                 <form asp-action="Logout" method="post" class="d-inline">
-                                    <button type="submit" class="nav-link" style="background:none; border:none; color:#fff; cursor:pointer;">Cerrar sesión</button>
+                                    <button type="submit" class="nav-link nav-link-button btn-no-outline">Cerrar sesión</button>
                                 </form>
-                        </li>
+                            </li>
                         }
                     </ul>
                 </div>
@@ -55,19 +93,19 @@
         </nav>
     </header>
 
-    <main b-hh7t54o8my role="main" class="flex-grow-1 container py-4">
+    <main role="main" class="flex-grow-1 container py-4">
         @RenderBody()
     </main>
 
-    <footer b-hh7t54o8my class="bg-light text-center text-muted py-3 mt-auto border-top">
-        <div b-hh7t54o8my class="container">
+    <footer class="bg-light text-center text-muted py-3 mt-auto border-top">
+        <div class="container">
             © 2025 - Sistema de Ventas
         </div>
     </footer>
 
     <script src="/lib/jquery/dist/jquery.min.js"></script>
     <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo"></script>
+    <script src="/js/site.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

@@ -21,6 +21,7 @@ namespace SistemaVentas.Controllers
 
         public IActionResult Index()
         {
+            // Si no hay sesión activa para cliente o usuario, redirigir a Login
             if (HttpContext.Session.GetInt32("ClienteId") == null && HttpContext.Session.GetInt32("UsuarioId") == null)
             {
                 return RedirectToAction("Login");
@@ -46,7 +47,7 @@ namespace SistemaVentas.Controllers
                 if (clienteExistente != null)
                 {
                     HttpContext.Session.SetInt32("ClienteId", clienteExistente.id_cliente);
-                    HttpContext.Session.SetString("UsuarioRol", "Cliente");
+                    HttpContext.Session.SetString("UsuarioRol", "Cliente"); // Guardar rol
 
                     return RedirectToAction("Index", "Home");
                 }
@@ -57,6 +58,7 @@ namespace SistemaVentas.Controllers
             return View(cliente);
         }
 
+        // ----- ADMIN LOGIN -----
         public IActionResult LoginAdmin()
         {
             return View();
@@ -73,7 +75,7 @@ namespace SistemaVentas.Controllers
                 if (user != null)
                 {
                     HttpContext.Session.SetInt32("UsuarioId", user.id_usuario);
-                    HttpContext.Session.SetString("UsuarioRol", user.rol ?? "Administrador");
+                    HttpContext.Session.SetString("UsuarioRol", user.rol ?? "Administrador"); // Guardar rol
 
                     return RedirectToAction("Index", "Home");
                 }
@@ -84,6 +86,7 @@ namespace SistemaVentas.Controllers
             return View(usuarioModel);
         }
 
+        // Registro de cliente
         public IActionResult Create()
         {
             return View();
@@ -111,6 +114,7 @@ namespace SistemaVentas.Controllers
             return View(cliente);
         }
 
+        // Cerrar sesión (limpiar sesión)
         [HttpPost]
         public IActionResult Logout()
         {
