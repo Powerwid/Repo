@@ -1,0 +1,36 @@
+@model SistemaVentas.Models.Entities.Usuarios
+
+@{
+    ViewData["Title"] = "Registro de Administrador";
+}
+
+<h2>Registro de Administradores</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="nombre">Nombre</label>
+        <input asp-for="nombre" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="apellido">Apellido</label>
+        <input asp-for="apellido" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="usuario">usuario</label>
+        <input asp-for="usuario" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="contraseña">contraseña</label>
+        <input asp-for="contraseña" class="form-control" />
+    </div>
+
+
+    <button type="submit" class="btn btn-primary mt-2">Registrarse</button>
+</form>
+
+<br>
+
+<p>¿Ya tienes cuenta? <a href="@Url.Action("Login", "Home")">Iniciar sesión</a></p>
