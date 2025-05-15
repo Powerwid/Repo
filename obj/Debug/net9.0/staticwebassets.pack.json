@@ -13,10 +13,6 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Senati\\Repo\\wwwroot\\images\\senati.png.png",
-      "PackagePath": "staticwebassets\\images\\senati.png.png"
-    },
-    {
       "Id": "C:\\Senati\\Repo\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

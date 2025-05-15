@@ -16,9 +16,22 @@ namespace SistemaVentas.Controllers
             _context = context;
         }
 
+        private bool UsuarioEsAdmin()
+        {
+            var rol = HttpContext.Session.GetString("UsuarioRol");
+            return rol == "Administrador";
+        }
+
+        private IActionResult RedireccionSiNoEsAdmin()
+        {
+            return RedirectToAction("NoAutorizado", "Home");
+        }
+
         // GET: Categoria
         public IActionResult Index()
         {
+            if (!UsuarioEsAdmin()) return RedireccionSiNoEsAdmin();
+
             var categorias = _context.Categoria.ToList();
             return View(categorias);
         }
@@ -26,6 +39,8 @@ namespace SistemaVentas.Controllers
         // GET: Categoria/Create
         public IActionResult Create()
         {
+            if (!UsuarioEsAdmin()) return RedireccionSiNoEsAdmin();
+
             return View();
         }
 
@@ -34,6 +49,8 @@ namespace SistemaVentas.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Categoria categoria)
         {
+            if (!UsuarioEsAdmin()) return RedireccionSiNoEsAdmin();
+
             if (ModelState.IsValid)
             {
                 try
@@ -53,16 +70,13 @@ namespace SistemaVentas.Controllers
         // GET: Categoria/Edit/5
         public IActionResult Edit(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            if (!UsuarioEsAdmin()) return RedireccionSiNoEsAdmin();
+
+            if (id == null) return NotFound();
 
             var categoria = _context.Categoria.Find(id);
-            if (categoria == null)
-            {
-                return NotFound();
-            }
+            if (categoria == null) return NotFound();
+
             return View(categoria);
         }
 
@@ -71,10 +85,9 @@ namespace SistemaVentas.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, Categoria categoria)
         {
-            if (id != categoria.id_categoria)
-            {
-                return NotFound();
-            }
+            if (!UsuarioEsAdmin()) return RedireccionSiNoEsAdmin();
+
+            if (id != categoria.id_categoria) return NotFound();
 
             if (ModelState.IsValid)
             {
@@ -95,16 +108,13 @@ namespace SistemaVentas.Controllers
         // GET: Categoria/Delete/5
         public IActionResult Delete(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            if (!UsuarioEsAdmin()) return RedireccionSiNoEsAdmin();
+
+            if (id == null) return NotFound();
 
             var categoria = _context.Categoria.Find(id);
-            if (categoria == null)
-            {
-                return NotFound();
-            }
+            if (categoria == null) return NotFound();
+
             return View(categoria);
         }
 
@@ -113,6 +123,8 @@ namespace SistemaVentas.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
+            if (!UsuarioEsAdmin()) return RedireccionSiNoEsAdmin();
+
             var categoria = _context.Categoria.Find(id);
             if (categoria != null)
             {

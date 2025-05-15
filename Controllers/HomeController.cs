@@ -21,7 +21,7 @@ namespace SistemaVentas.Controllers
 
         public IActionResult Index()
         {
-            if (HttpContext.Session.GetInt32("ClienteId") == null)
+            if (HttpContext.Session.GetInt32("ClienteId") == null && HttpContext.Session.GetInt32("UsuarioId") == null)
             {
                 return RedirectToAction("Login");
             }
@@ -29,6 +29,7 @@ namespace SistemaVentas.Controllers
             return View();
         }
 
+        // ----- CLIENTE LOGIN -----
         public IActionResult Login()
         {
             return View();
@@ -39,21 +40,48 @@ namespace SistemaVentas.Controllers
         {
             if (ModelState.IsValid)
             {
-                var clienteExistente = _context.Clientes.FirstOrDefault(c => c.correo == cliente.correo && c.telefono == cliente.telefono);
+                var clienteExistente = _context.Clientes
+                    .FirstOrDefault(c => c.correo == cliente.correo && c.telefono == cliente.telefono);
 
                 if (clienteExistente != null)
                 {
                     HttpContext.Session.SetInt32("ClienteId", clienteExistente.id_cliente);
+                    HttpContext.Session.SetString("UsuarioRol", "Cliente");
 
                     return RedirectToAction("Index", "Home");
                 }
-                else
-                {
-                    ViewData["Error"] = "Correo o teléfono incorrectos.";
-                }
+
+                ViewData["Error"] = "Correo o teléfono incorrectos.";
             }
 
             return View(cliente);
+        }
+
+        public IActionResult LoginAdmin()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult LoginAdmin(Usuarios usuarioModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = _context.Usuarios
+                    .FirstOrDefault(u => u.usuario == usuarioModel.usuario && u.contraseña == usuarioModel.contraseña);
+
+                if (user != null)
+                {
+                    HttpContext.Session.SetInt32("UsuarioId", user.id_usuario);
+                    HttpContext.Session.SetString("UsuarioRol", user.rol ?? "Administrador");
+
+                    return RedirectToAction("Index", "Home");
+                }
+
+                ViewData["Error"] = "Usuario o contraseña incorrectos.";
+            }
+
+            return View(usuarioModel);
         }
 
         public IActionResult Create()
@@ -72,13 +100,12 @@ namespace SistemaVentas.Controllers
                 if (cliente.id_cliente > 0)
                 {
                     HttpContext.Session.SetInt32("ClienteId", cliente.id_cliente);
+                    HttpContext.Session.SetString("UsuarioRol", "Cliente");
 
                     return RedirectToAction("Index", "Home");
                 }
-                else
-                {
-                    ViewData["Error"] = "Hubo un problema al crear la cuenta. Por favor, inténtelo de nuevo.";
-                }
+
+                ViewData["Error"] = "Hubo un problema al crear la cuenta.";
             }
 
             return View(cliente);
@@ -87,10 +114,13 @@ namespace SistemaVentas.Controllers
         [HttpPost]
         public IActionResult Logout()
         {
-            HttpContext.Session.Remove("ClienteId");
+            HttpContext.Session.Clear();
             return RedirectToAction("Index", "Home");
+        }
 
-            
+        public IActionResult NoAutorizado()
+        {
+            return View();
         }
 
         public IActionResult Privacy()

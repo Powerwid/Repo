@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SistemaVentas.Models.Entities
 {
-    public class Usuario
+    public class Usuarios
     {
         [Key]
         public int id_usuario { get; set; }

@@ -25,7 +25,7 @@ namespace SistemaVentas.Data
         public DbSet<MovimientoInventario> MovimientoInventario { get; set; }
         public DbSet<Pagos> Pagos { get; set; }
         public DbSet<Producto> Producto { get; set; }
-        public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<Usuarios> Usuarios { get; set; }
         public DbSet<Ventas> Ventas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -42,7 +42,7 @@ namespace SistemaVentas.Data
             modelBuilder.Entity<MovimientoInventario>().ToTable("MovimientoInventario");
             modelBuilder.Entity<Pagos>().ToTable("Pagos");
             modelBuilder.Entity<Producto>().ToTable("Producto");
-            modelBuilder.Entity<Usuario>().ToTable("Usuario");
+            modelBuilder.Entity<Usuarios>().ToTable("Usuario");
             modelBuilder.Entity<Ventas>().ToTable("Ventas");
 
             // Configurar precisión y escala para propiedades decimal
