@@ -1,21 +1,35 @@
 @model SistemaVentas.Models.Entities.Producto
 
+@{
+    ViewData["Title"] = "Editar Producto";
+}
+
 <h1>Editar Producto</h1>
 
-@if (!string.IsNullOrEmpty(ViewData.ModelState[string.Empty]?.Errors.FirstOrDefault()?.ErrorMessage))
+<!-- Mostrar mensaje de éxito o error -->
+@if (!string.IsNullOrEmpty(TempData["SuccessMessage"]?.ToString()))
 {
-    <div class="alert alert-danger">
-        @ViewData.ModelState[string.Empty]?.Errors.FirstOrDefault()?.ErrorMessage
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+@if (!string.IsNullOrEmpty(TempData["ErrorMessage"]?.ToString()))
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["ErrorMessage"]
     </div>
 }
 
 <form asp-action="Edit" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <input type="hidden" asp-for="id_producto" />
+
     <div class="form-group">
         <label asp-for="nombre" class="control-label"></label>
         <input asp-for="nombre" class="form-control" />
         <span asp-validation-for="nombre" class="text-danger"></span>
     </div>
+
     <div class="form-group">
         <label asp-for="descripcion" class="control-label"></label>
         <input asp-for="descripcion" class="form-control" />
@@ -26,16 +40,19 @@
         <input asp-for="precio" class="form-control" />
         <span asp-validation-for="precio" class="text-danger"></span>
     </div>
+    
     <div class="form-group">
         <label asp-for="stock" class="control-label"></label>
         <input asp-for="stock" class="form-control" />
         <span asp-validation-for="stock" class="text-danger"></span>
     </div>
+    
     <div class="form-group">
         <label asp-for="estado" class="control-label"></label>
         <input asp-for="estado" class="form-control" />
         <span asp-validation-for="estado" class="text-danger"></span>
     </div>
+
     <div class="form-group">
         <label asp-for="categoria_id_categoria" class="control-label"></label>
         <select asp-for="categoria_id_categoria" class="form-control" asp-items="ViewBag.Categorias">
@@ -43,11 +60,13 @@
         </select>
         <span asp-validation-for="categoria_id_categoria" class="text-danger"></span>
     </div>
+
     <div class="form-group">
         <input type="submit" value="Guardar" class="btn btn-primary" />
+        <a asp-action="Index" class="btn btn-secondary">Volver</a>
     </div>
 </form>
 
-<div>
-    <a asp-action="Index">Volver a la Lista</a>
-</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

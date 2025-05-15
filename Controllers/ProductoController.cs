@@ -21,10 +21,16 @@ namespace SistemaVentas.Controllers
         }
 
         // Método auxiliar para validar si el usuario es Administrador
-        private bool IsAdmin()
+        private bool UsuarioEsAdmin()
         {
             var rol = HttpContext.Session.GetString("UsuarioRol");
             return rol == "Administrador";
+        }
+
+        // Método auxiliar para redirigir si no es administrador
+        private IActionResult RedireccionSiNoEsAdmin()
+        {
+            return RedirectToAction("NoAutorizado", "Home");
         }
 
         // GET: Producto
@@ -41,8 +47,7 @@ namespace SistemaVentas.Controllers
         // GET: Producto/Create
         public IActionResult Create()
         {
-            if (!IsAdmin())
-                return RedirectToAction("Index");
+            if (!UsuarioEsAdmin()) return RedireccionSiNoEsAdmin();
 
             ViewBag.Categorias = new SelectList(_context.Categoria, "id_categoria", "nombre");
             return View();
@@ -53,8 +58,7 @@ namespace SistemaVentas.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Producto producto)
         {
-            if (!IsAdmin())
-                return RedirectToAction("Index");
+            if (!UsuarioEsAdmin()) return RedireccionSiNoEsAdmin();
 
             if (ModelState.IsValid)
             {
@@ -76,17 +80,15 @@ namespace SistemaVentas.Controllers
         // GET: Producto/Edit/5
         public IActionResult Edit(int? id)
         {
-            if (!IsAdmin())
-                return RedirectToAction("Index");
+            if (!UsuarioEsAdmin()) return RedireccionSiNoEsAdmin();
 
-            if (id == null)
-                return NotFound();
+            if (id == null) return NotFound();
 
             var producto = _context.Producto.Find(id);
-            if (producto == null)
-                return NotFound();
+            if (producto == null) return NotFound();
 
-            ViewBag.Categorias = new SelectList(_context.Categoria, "id_categoria", "nombre");
+            // Cargar las categorías y preseleccionar la categoría actual del producto
+            ViewBag.Categorias = new SelectList(_context.Categoria, "id_categoria", "nombre", producto.categoria_id_categoria);
             return View(producto);
         }
 
@@ -95,11 +97,9 @@ namespace SistemaVentas.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, Producto producto)
         {
-            if (!IsAdmin())
-                return RedirectToAction("Index");
+            if (!UsuarioEsAdmin()) return RedireccionSiNoEsAdmin();
 
-            if (id != producto.id_producto)
-                return NotFound();
+            if (id != producto.id_producto) return NotFound();
 
             if (ModelState.IsValid)
             {
@@ -116,20 +116,17 @@ namespace SistemaVentas.Controllers
             }
             ViewBag.Categorias = new SelectList(_context.Categoria, "id_categoria", "nombre");
             return View(producto);
-        }
+        }  
 
         // GET: Producto/Delete/5
         public IActionResult Delete(int? id)
         {
-            if (!IsAdmin())
-                return RedirectToAction("Index");
+            if (!UsuarioEsAdmin()) return RedireccionSiNoEsAdmin();
 
-            if (id == null)
-                return NotFound();
+            if (id == null) return NotFound();
 
             var producto = _context.Producto.Find(id);
-            if (producto == null)
-                return NotFound();
+            if (producto == null) return NotFound();
 
             return View(producto);
         }
@@ -139,8 +136,7 @@ namespace SistemaVentas.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            if (!IsAdmin())
-                return RedirectToAction("Index");
+            if (!UsuarioEsAdmin()) return RedireccionSiNoEsAdmin();
 
             var producto = _context.Producto.Find(id);
             if (producto != null)
