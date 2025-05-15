@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mandarina\\Documents\\Proyecto\\Entregable\\Visual\\Repo_2\\Repo\\SistemaVentas.csproj": {}
+    "D:\\Proyecto\\Repo\\SistemaVentas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mandarina\\Documents\\Proyecto\\Entregable\\Visual\\Repo_2\\Repo\\SistemaVentas.csproj": {
+    "D:\\Proyecto\\Repo\\SistemaVentas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mandarina\\Documents\\Proyecto\\Entregable\\Visual\\Repo_2\\Repo\\SistemaVentas.csproj",
+        "projectUniqueName": "D:\\Proyecto\\Repo\\SistemaVentas.csproj",
         "projectName": "SistemaVentas",
-        "projectPath": "C:\\Users\\mandarina\\Documents\\Proyecto\\Entregable\\Visual\\Repo_2\\Repo\\SistemaVentas.csproj",
-        "packagesPath": "C:\\Users\\mandarina\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mandarina\\Documents\\Proyecto\\Entregable\\Visual\\Repo_2\\Repo\\obj\\",
+        "projectPath": "D:\\Proyecto\\Repo\\SistemaVentas.csproj",
+        "packagesPath": "C:\\Users\\AlumnoETI\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyecto\\Repo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\mandarina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AlumnoETI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "D:\\Aplicaciones\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -89,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "D:\\Aplicaciones\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
